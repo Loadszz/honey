@@ -1,0 +1,245 @@
+.products {
+	padding-bottom: 150px;
+	@media (max-width: $mobile) {
+		padding-bottom: 100px;
+	}
+	// .products__container
+	&__container {
+	}
+	// .products__body
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		text-align: center;
+		@media (max-width: $mobile) {
+			flex-wrap: nowrap;
+			overflow-y: scroll;
+			padding-top: 15px;
+		}
+	}
+	// .products__column
+	&__column {
+		flex: 0 0 420px;
+		position: relative;
+		padding: 20px 40px 38px;
+		margin-bottom: 60px;
+		@media (max-width: 1320px) {
+			flex: 0 0 48%;
+		}
+		@media (max-width: $tablet) {
+			padding: 10px;
+		}
+		@media (max-width: $mobile) {
+			padding: 20px 20px 30px;
+			margin: 0;
+			flex: 0 0 auto;
+			&:not(:last-child) {
+				margin-right: 20px;
+			}
+		}
+		&--color {
+			background: #fcece3;
+			border: 4px solid #fcece3;
+		}
+		&--border {
+			border: 4px solid #fcece3;
+		}
+	}
+	// .products__image
+	&__image {
+		img {
+			max-width: 100%;
+			height: 200px;
+		}
+	}
+	// .products__name
+	&__name {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 150%;
+		letter-spacing: 0.01em;
+		color: #270813;
+		@media (max-width: $mobile) {
+			font-size: 16px;
+		}
+	}
+	// .products__title
+	&__title {
+		font-weight: 700;
+		font-size: 36px;
+		line-height: 130%;
+		color: #270813;
+		margin-bottom: 20px;
+		@media (max-width: $mobile) {
+			font-size: 24px;
+		}
+	}
+	// .products__item
+	&__item {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		height: 24px;
+		margin-bottom: 20px;
+		@media (max-width: $mobile) {
+			flex-direction: column;
+		}
+	}
+	// .products__price
+	&__price {
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 130%;
+		color: #270813;
+		margin-bottom: 20px;
+	}
+	// .products__inner
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	// .products__button
+	&__button {
+		padding: 14.5px 112px;
+		margin-bottom: 15px;
+		@media (max-width: $tablet) {
+			padding: 14.5px 82px;
+		}
+		@media (max-width: $mobile) {
+			padding: 11.5px 67.5px;
+		}
+	}
+	// .products__link
+	&__link {
+		display: inline-block;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 150%;
+		letter-spacing: 0.01em;
+		color: #270813;
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			bottom: 5px;
+			left: 0;
+			border-bottom: 1px solid #000;
+		}
+		@media (max-width: $mobile) {
+			font-size: 16px;
+		}
+	}
+	// .products__category
+	&__category {
+		position: absolute;
+		top: -15px;
+		left: -6px;
+		z-index: 10;
+		font-size: 63px;
+		&::after {
+			content: "";
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 150%;
+			letter-spacing: 0.01em;
+			color: #ffffff;
+		}
+		&--to-order {
+			&::after {
+				content: "Під \A замовлення";
+				white-space: pre;
+			}
+			&::before {
+				color: #ae2456;
+			}
+		}
+		&--in-stock {
+			&::after {
+				content: "В наявності";
+			}
+			&::before {
+				color: #006d4c;
+			}
+		}
+		@media (max-width: $mobile) {
+			left: -4px;
+		}
+	}
+}
+
+.item-block {
+	// .item-block__list
+	&__list {
+		position: relative;
+		@media (any-hover: hover) {
+			&:hover {
+				.item-block__value {
+					display: block;
+				}
+			}
+		}
+	}
+	// .item-block__inner
+	&__inner {
+		display: flex;
+		align-items: center;
+		span {
+			font-size: 24px;
+			color: #ae2456;
+			cursor: pointer;
+		}
+	}
+	// .item-block__title
+	&__title {
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 150%;
+		letter-spacing: 0.01em;
+		color: #ae2456;
+		cursor: pointer;
+	}
+	// .item-block__value
+	&__value {
+		display: none;
+		position: absolute;
+		top: 20px;
+		left: 0;
+		z-index: 20;
+		background: #fcf8f8;
+		box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+		padding: 20px 0;
+		text-align-last: left;
+		&:not(:last-child) {
+			margin-bottom: 8px;
+		}
+		&.active {
+			display: block;
+		}
+	}
+	// .item-block__name
+	&__name {
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 150%;
+		color: #270813;
+		cursor: pointer;
+		padding: 0 20px;
+		@media (any-hover: hover) {
+			&:hover {
+				background: rgba(174, 36, 86, 0.2);
+			}
+		}
+	}
+}

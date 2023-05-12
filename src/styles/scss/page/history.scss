@@ -1,0 +1,119 @@
+.history {
+	padding-bottom: 150px;
+	@media (max-width: $mobile) {
+		padding-bottom: 100px;
+	}
+	// .history__container
+	&__container {
+	}
+	// .history__subtitle
+	&__subtitle {
+		margin-bottom: 15px;
+		@media (max-width: $mobile) {
+			margin-bottom: 5px;
+		}
+	}
+	// .history__title
+	&__title {
+		margin-bottom: 57px;
+		@media (max-width: $mobile) {
+			margin-bottom: 20px;
+		}
+	}
+	// .history__body
+	&__body {
+		display: flex;
+		@media (max-width: $tablet) {
+			overflow: scroll;
+		}
+	}
+}
+
+.body-block {
+	// .body-block__column
+	&__column {
+		background: #fcece3;
+		flex: 0 1 420px;
+		padding: 0 30px;
+		position: relative;
+		&:not(:last-child) {
+			margin-right: 30px;
+			@media (max-width: $mobile) {
+				margin-right: 20px;
+			}
+		}
+		@media (max-width: $tablet) {
+			flex: 0 0 420px;
+		}
+		@media (max-width: $mobile) {
+			flex: 0 0 264px;
+			padding: 0 20px;
+		}
+	}
+	// .body-block__image
+	&__image {
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		height: 283.98px;
+		margin-bottom: 22px;
+		img {
+			max-width: 100%;
+		}
+	}
+	// .body-block__title
+	&__title {
+		font-weight: 700;
+		font-size: 36px;
+		line-height: 41px;
+		color: #000000;
+		margin-bottom: 20px;
+		@media (max-width: $mobile) {
+			font-size: 22px;
+			margin-bottom: 10px;
+		}
+	}
+	// .body-block__text
+	&__text {
+		font-size: 18px;
+		line-height: 150%;
+		color: #000000;
+		margin-bottom: 120px;
+		@media (max-width: $mobile) {
+			font-size: 16px;
+			margin-bottom: 90px;
+		}
+	}
+	// .body-block__item
+	&__item {
+		display: flex;
+		align-items: center;
+		position: absolute;
+		bottom: 30px;
+		left: 30px;
+		@media (max-width: $mobile) {
+			left: 20px;
+		}
+	}
+	// .body-block__name
+	&__name {
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 27px;
+		color: #270813;
+		margin-right: 25px;
+		@media (max-width: $mobile) {
+			font-size: 18px;
+			letter-spacing: 0.01em;
+			color: #ae2456;
+		}
+	}
+	// .body-block__icon
+	&__icon {
+		font-size: 14px;
+		cursor: pointer;
+		@media (max-width: $mobile) {
+			color: #ae2456;
+		}
+	}
+}

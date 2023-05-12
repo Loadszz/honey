@@ -1,0 +1,38 @@
+// Заголовки, общие БЄМ блоки и проче...
+.button {
+	display: inline-block;
+	background: #ffc100;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 130%;
+	color: #270813;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+		}
+	}
+	&:focus {
+		background: #ff9d00;
+	}
+}
+
+.title {
+	font-size: 72px;
+	font-weight: 700;
+	line-height: 105%;
+	color: #000000;
+	@media (max-width: $mobile) {
+		font-size: 36px;
+	}
+}
+.subtitle {
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 27px;
+	color: #ae2456;
+	@media (max-width: $mobile) {
+		font-size: 16px;
+	}
+}

@@ -1,0 +1,227 @@
+.basket {
+	// .basket__cart
+	&__cart {
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 150%;
+		color: #270813;
+		position: relative;
+		cursor: pointer;
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #c52e63;
+			}
+		}
+		span {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-weight: 600;
+			font-size: 12px;
+			line-height: 100%;
+			color: #ffffff;
+			background: #163f99;
+			border-radius: 50px;
+			position: absolute;
+			top: 0;
+			right: -16px;
+			width: 15px;
+			height: 15px;
+		}
+	}
+	// .basket__show
+	&__show {
+		position: fixed;
+		top: 0;
+		right: -100%;
+		visibility: hidden;
+		background: rgba(0, 0, 0, 0.5);
+		height: 100%;
+		width: 100%;
+		z-index: 99;
+		transition: all 0.3s ease 0s;
+		&.active {
+			right: 0;
+			visibility: visible;
+		}
+	}
+	// .basket__block
+	&__block {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 732px;
+		background: #fcf8f8;
+		z-index: 100;
+		overflow-y: scroll;
+		height: 800px;
+		padding: 20px 56.6px 88px 60px;
+		@media (max-width: $mobile) {
+			width: 100%;
+			height: 100%;
+			padding: 20px 15px 40px 15px;
+		}
+	}
+	// .basket__item
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 50px;
+		._icon-cansel {
+			cursor: pointer;
+		}
+		@media (max-width: $mobile) {
+			margin-bottom: 20px;
+		}
+	}
+	// .basket__title
+	&__title {
+		font-weight: 700;
+		font-size: 64px;
+		line-height: 130%;
+		color: #270813;
+		@media (max-width: $mobile) {
+			font-size: 32px;
+		}
+	}
+	// .basket__body
+	&__body {
+		display: flex;
+		align-items: center;
+		margin-bottom: 30px;
+	}
+	// .basket__image
+	&__image {
+		flex: 0 0 150px;
+		margin-right: 40px;
+		text-align: center;
+		img {
+			max-width: 100%;
+			height: 120px;
+			@media (max-width: $mobile) {
+				height: 70px;
+			}
+		}
+		@media (max-width: $mobile) {
+			flex: 0 0 100px;
+			margin-right: 20px;
+		}
+	}
+	// .basket__inner
+	&__inner {
+		flex: 1 0 auto;
+	}
+	// .basket__row
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+		._icon-cansel {
+			content: "";
+			font-size: 16px;
+		}
+	}
+	// .basket__name
+	&__name {
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 130%;
+		color: #270813;
+		text-align-last: left;
+		@media (max-width: $mobile) {
+			font-size: 18px;
+			max-width: 150px;
+		}
+	}
+	// .basket__counter
+	&__counter {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		min-width: 100px;
+		span {
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 130%;
+			color: #270813;
+			cursor: pointer;
+			@media (max-width: $mobile) {
+				font-size: 18px;
+			}
+		}
+		@media (max-width: $mobile) {
+			min-width: 50px;
+		}
+	}
+	// .basket__count
+	&__count {
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 130%;
+		color: #270813;
+		@media (max-width: $mobile) {
+			font-size: 18px;
+		}
+	}
+	// .basket__bottom
+	&__bottom {
+		text-align: center;
+	}
+	// .basket__price
+	&__price {
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 130%;
+		text-align: right;
+		color: #ae2456;
+		@media (max-width: $mobile) {
+			font-size: 18px;
+		}
+	}
+	// .basket__sum
+	&__sum {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-weight: 700;
+		font-size: 36px;
+		line-height: 130%;
+		color: #270813;
+		margin-bottom: 40px;
+		span {
+			font-size: 36px;
+			line-height: 130%;
+			color: #ae2456;
+		}
+	}
+	// .basket__continue
+	&__continue {
+		display: inline-block;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 130%;
+		color: #270813;
+		cursor: pointer;
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			bottom: 5px;
+			left: 0;
+			border-bottom: 1px solid #000;
+		}
+	}
+	&__clear {
+		font-weight: 700;
+		font-size: 46px;
+		line-height: 130%;
+		color: #270813;
+		text-align: center;
+		margin-bottom: 30px;
+	}
+}

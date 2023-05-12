@@ -1,0 +1,226 @@
+// .header {
+// 	position: fixed;
+// 	top: 0;
+// 	left: 0;
+// 	width: 100%;
+// 	z-index: 10;
+// 	background-color: rgb(156, 50, 50);
+
+// 	&__container {
+// 		max-width: 1200px;
+// 		margin: 0px auto;
+// 		display: flex;
+// 		padding: 0px 30px;
+// 		align-items: center;
+// 		justify-content: space-between;
+// 		min-height: 70px;
+// 	}
+
+// 	&__logo {
+// 		border-radius: 50%;
+// 		background-color: #fff;
+// 		position: relative;
+// 		z-index: 5;
+// 		width: 40px;
+// 		height: 40px;
+// 	}
+
+// 	&__menu {
+// 	}
+// }
+
+// .menu {
+// 	&__icon {
+// 		display: none;
+// 		@media (max-width: $md3) {
+// 			z-index: 5;
+// 			display: block;
+// 			position: relative;
+// 			width: 30px;
+// 			height: 18px;
+// 			cursor: pointer;
+// 			span,
+// 			&::before,
+// 			&::after {
+// 				left: 0;
+// 				position: absolute; 
+// 				width: 100%; 
+// 				height: 10%; 
+// 				transition: all 0.3s ease 0s;
+// 				background-color: #fff;
+// 			}
+// 			span {
+// 				top: 50%;
+// 				transform: scale(1) translate(0px, -50%);
+// 			}
+// 			&::before {
+// 				content: '';
+// 				top: 0;
+	
+// 			}
+// 			&::after {
+// 				content: '';
+// 				bottom: 0;
+// 			}
+// 			&.active {
+// 				span {
+// 					transform: scale(0) translate(0px, -50%);
+// 				}
+// 				&::before {
+// 					top: 50%;
+// 					transform: rotate(-45deg) translate(0px, -50%);
+// 				}
+// 				&::after {
+// 					bottom: 50%;
+// 					transform: rotate(45deg) translate(0px, 50%);
+// 				}
+// 			}
+// 		}
+		
+// 	}
+
+// 	&__body {
+// 		@media (max-width: $md3) {
+// 			position: fixed;
+// 			top: 0;
+// 			left: -100%;
+// 			width: 100%;
+// 			height: 100%;
+// 			background-color: #000;
+// 			padding: 100px 30px 30px 30px;
+// 			transition: left 0.3s ease 0s;
+// 			overflow: auto;
+// 			&.active {
+// 				left: 0;
+// 			}
+// 			&::before {
+// 				content: '';
+// 				position: fixed;
+// 				top: 0;
+// 				left: 0;
+// 				width: 100%;
+// 				height: 70px;
+// 				background-color: rgb(156, 50, 50);
+// 				z-index: 2;
+// 			}
+// 		}
+// 	}
+
+// 	&__list {
+// 		> li {
+// 			position: relative;
+// 			margin: 0px 0px 0px 20px;
+// 			@media (max-width: $md3) {
+// 					flex-wrap: wrap;
+// 					margin: 0px 0px 30px 0px;
+// 				> li:last-child {
+// 					margin-bottom: 0px;
+// 				}
+// 			}
+// 		}
+// 		@media (min-width: $md3) {
+// 			display: flex;
+// 			align-items: center;
+// 			> li {
+// 				padding: 10px 0;
+// 			}
+// 		}
+// 	}
+
+// 	&__link {
+// 		color: #fff;
+// 		font-size: 18px;
+// 		&:hover {
+// 			text-decoration: underline;
+// 		}
+// 		@media (max-width: $md3) {
+// 			font-size: 24px;
+// 		}
+// 	}
+
+// 	&__arrow {
+// 		display: none;
+// 	}
+
+// 	&__sub-list {
+// 		position: absolute;
+// 		top: 100%;
+// 		right: 0;
+// 		background-color: #000;
+// 		padding: 15px;
+// 		min-width: 200px;
+// 		li {
+// 			margin: 0px 0px 10px 0px;
+// 			&:last-child {
+// 				margin: 0;
+// 			}
+// 		}
+// 		@media (min-width: $md3) {
+// 			transform: translate(0px, 10%);
+// 			opacity: 0;
+// 			visibility: hidden;
+// 			pointer-events: none;
+// 			transition: all 0.3s ease 0s;
+// 		}
+// 		@media (max-width: $md3) {
+// 			position: relative;
+// 			background-color: #fff;
+// 			flex: 1 1 100%;
+// 			margin: 20px 0px 0px 0px;
+// 			display: none;
+// 		}
+// 	}
+
+// 	&__sub-link {
+// 		color: #fff;
+// 		&:hover {
+// 			text-decoration: underline;
+// 		}
+// 		@media (max-width: $md3) {
+// 			font-size: 20px;
+// 			color: #000;
+// 		}
+// 	}
+
+// }
+
+// /* --------------------------------- */
+// body {
+// 	&.pc .menu__list > li:hover .menu__sub-list {
+// 	opacity: 1;
+// 	visibility: visible;
+// 	transform: translate(0px, 0px);
+// 	pointer-events: all;
+// 	}
+// 	&.touch .menu__link {
+// 	flex: 1 1 auto;
+// 	}		
+// 	&.touch .menu__list > li {
+// 		display: flex;
+// 		align-items: center;
+// 	}	
+// 	&.touch .menu__arrow {
+// 		display: block;
+// 		width: 0;
+// 		height: 0;
+// 		margin: 0px 0px 0px 5px;
+// 		transition: transform 0.3s ease 0s;
+// 		border-left: 5px solid transparent;
+// 		border-right: 5px solid transparent;
+// 		border-top: 10px solid #fff;
+// 	}
+
+// 	&.touch .menu__list > li.active .menu__sub-list {
+// 		opacity: 1;
+// 		visibility: visible;
+// 		transform: translate(0px, 0px);
+// 		pointer-events: all;
+// 	}
+// 	&.touch .menu__list > li.active .menu__arrow {
+// 		transform: rotate(-180deg);
+// 	}
+// 	&.touch .menu__list > li.active .menu__sub-list {
+// 		display: block;
+// 	}
+// }
+// /* --------------------------------- */

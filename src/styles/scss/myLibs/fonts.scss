@@ -1,0 +1,23 @@
+@font-face{
+	font-family: 'fontawesome';
+	font-display: swap;
+	src: url("/dist/fonts/fontawesome-webfont.woff2") format("woff2"), url("/dist/fonts/fontawesome-webfont.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'Veles';
+	font-display: swap;
+	src: url("../fonts/Veles-Regular.0.9.2.woff2") format("woff2"), url("../fonts/Veles-Regular.0.9.2.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'icons';
+	font-display: swap;
+	src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}

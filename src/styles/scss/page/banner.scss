@@ -1,0 +1,105 @@
+.banner {
+	padding: 192px 0;
+	background: #fcece3;
+	background-image: url(../../../../public/images/block-20.png), url(../../../../public/images/block-21.png);
+	background-repeat: no-repeat;
+	background-position: left, right;
+	background-position-y: 74%, 12%;
+	@media (max-width: $tablet) {
+		background-size: auto 35%;
+	}
+	@media (max-width: $mobile) {
+		padding: 234px 0 79px;
+		background-image: url(../../../../public/images/block-21-1.png);
+		background-position: top;
+		background-size: auto 40%;
+	}
+	@media (max-width: $mobileSmall) {
+		padding: 274px 0 79px;
+	}
+	// .banner__container
+	&__container {
+		position: relative;
+	}
+	// .banner__body
+	&__body {
+		text-align: center;
+		max-width: 613px;
+		margin: 0 auto;
+		@media (max-width: $mobile) {
+			text-align: left;
+		}
+	}
+	// .banner__title
+	&__title {
+		font-weight: 700;
+		font-size: 64px;
+		line-height: 130%;
+		color: #270813;
+		margin-bottom: 40px;
+		position: relative;
+		z-index: 10;
+		@media (max-width: $mobile) {
+			font-size: 36px;
+			margin-bottom: 20px;
+		}
+	}
+	// .banner__text
+	&__text {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 150%;
+		color: #270813;
+		margin-bottom: 57px;
+		position: relative;
+		z-index: 10;
+		@media (max-width: $mobile) {
+			margin-bottom: 30px;
+		}
+	}
+	// .banner__item
+	&__item {
+		position: relative;
+		z-index: 10;
+		@media (max-width: $mobile) {
+			text-align: center;
+		}
+	}
+	// .banner__button
+	&__button {
+		padding: 14.5px 60px;
+		margin-right: 30px;
+		@media (max-width: $mobile) {
+			display: none;
+		}
+		&--border {
+			background: transparent;
+			margin: 0;
+			border: 3px solid #270813;
+			transition: all 0.3s ease 0s;
+			@media (any-hover: hover) {
+				&:hover {
+					outline: 1px solid #270813;
+				}
+			}
+			@media (max-width: $mobile) {
+				display: inline-block;
+				font-size: 18px;
+				padding: 11.5px 91px;
+				background: #ffc100;
+				border: none;
+			}
+		}
+	}
+	// .banner__logo
+	&__logo {
+		font-size: 168px;
+		color: #ae2456;
+		position: absolute;
+		bottom: -131px;
+		right: 15px;
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,64 @@
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+[class*="_icon-"] {
+	&:before {
+		@extend %ic;
+		display: block;
+	}
+}
+._icon-cansel:before {
+	content: "\e90d";
+}
+._icon-basket:before {
+	content: "\e90c";
+}
+._icon-arrow:before {
+	content: "\e900";
+}
+._icon-circle-1:before {
+	content: "\e901";
+}
+._icon-circle-2:before {
+	content: "\e902";
+}
+._icon-circle-3:before {
+	content: "\e903";
+}
+._icon-circle-4:before {
+	content: "\e904";
+}
+._icon-circle-5:before {
+	content: "\e905";
+}
+._icon-circle-6:before {
+	content: "\e906";
+}
+._icon-facebook-negative:before {
+	content: "\e907";
+}
+._icon-honey-bakery:before {
+	content: "\e908";
+}
+._icon-instagram-negative:before {
+	content: "\e909";
+}
+._icon-logo:before {
+	content: "\e90b";
+}
+._icon-slider-arrow:before {
+	content: "\e914";
+}
+._icon-winter-drop:before {
+	content: "\e915";
+}
+._icon-cheveron-down:before {
+	content: "\e90a";
+}

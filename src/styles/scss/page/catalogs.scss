@@ -1,0 +1,78 @@
+.catalogs {
+	padding: 150px 0;
+	@media (max-width: $mobile) {
+		padding: 100px 0;
+	}
+	// .catalog__container
+	&__container {
+	}
+	// .catalog__subtitle
+	&__subtitle {
+		margin-bottom: 15px;
+		@media (max-width: $mobile) {
+			margin-bottom: 5px;
+		}
+	}
+	// .catalog__title
+	&__title {
+		margin-bottom: 60px;
+		@media (max-width: $mobile) {
+			margin-bottom: 20px;
+		}
+	}
+	// .catalog__body
+	&__body {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		margin: 0 -20px;
+		@media (max-width: $mobile) {
+			flex-wrap: nowrap;
+			overflow-x: scroll;
+		}
+	}
+	// .catalog__column
+	&__column {
+		flex: 0 1 25%;
+		padding: 0 20px;
+		margin-bottom: 20px;
+		@media (max-width: $mobile) {
+			flex: 0 0 250px;
+		}
+	}
+	// .catalog__image
+	&__image {
+		display: flex;
+		justify-content: center;
+		height: 195px;
+		align-items: center;
+		margin-bottom: 30px;
+		padding: 0 5px;
+		img {
+			max-width: 100%;
+		}
+		&--color {
+			background: #fcece3;
+		}
+		&--border {
+			border: 4px solid #fcece3;
+		}
+	}
+	// .catalog__item
+	&__item {
+		display: flex;
+		align-items: center;
+	}
+	// .catalog__text
+	&__text {
+		font-size: 18px;
+		line-height: 21px;
+		color: #000000;
+		margin-right: 25px;
+	}
+	// .catalog__icon
+	&__icon {
+		font-size: 9px;
+		cursor: pointer;
+	}
+}

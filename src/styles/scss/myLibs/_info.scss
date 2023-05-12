@@ -1,0 +1,16 @@
+// $fz: 80px; - Переменная
+// $color_1:#fff; - Переменная
+
+// %tplborder { - Шаблон
+// 	font-size: 32px;
+// 	border-bottom: 1px solid #000;
+// }
+// @extend %tplborder; - Подключение шаблона
+
+// @mixin fontz($f,$c) { - Миксин
+// 	font-size: $f;
+// 	color: $c;
+// }
+// @include fontz(100px,green); - Подключение Миксина
+
+// width: 300px / 960px * 100%; - Математика
